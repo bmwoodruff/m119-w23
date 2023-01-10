@@ -1,0 +1,64 @@
+---
+title: "Trash"
+author: "Ben"
+date: "2023-01-10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## My First Section
+
+We will plot the function $f(x)=3x$ below.
+
+
+```{r}
+f <- function(x){3*x}
+x <- seq(-4,7,0.1)
+plot(x,f(x), type = "l")
+```
+
+## Second Section
+
+Let's evaluate the function $h(x) = \sqrt{3-x}$ at $x=-4$ and $x=5$.
+
+```{r}
+h <- function(x){sqrt(3-x)}
+h(-4)
+h(5)
+```
+
+Notice that $h(5)$ is not defined (as $3-5<0$), which is why NANs was produced above. 
+
+## In class functions
+We'll not work on evaluating a few functions.
+
+The first function is $w(v) = v^2 - 5v -6$. 
+Let's define the function, and then evaluate it at various values.
+
+```{r}
+w <- function(v){v^2 - 5*v -6}
+w(-1)
+w(-3)
+w(6)
+w(4)
+```
+
+The second function is $f(x) = \frac{2x+4}{x^2}$. 
+Let's define the function, and then evaluate it at various values.
+
+```{r}
+f <- function(x){
+  ifelse(x < -1, x^3, 
+         ifelse( x == -1,NaN,
+                 ifelse(x < 4, 0*x-2, 
+                        sqrt(x))))
+}
+f(-10:10)
+```
+
+
+
+
