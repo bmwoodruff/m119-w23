@@ -1,0 +1,28 @@
+---
+title: "Example Project (In Class)"
+author: "Ben"
+date: "2023-01-12"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Introduction
+
+We'll load some data that represents 202 light bulb intensities about 2100 hour after being turned on.
+
+```{r}
+library(data4led)
+dist <- led_time(2100)
+head(dist)
+```
+
+We can visuaize the intensity with a histogram.
+
+```{r}
+hist(dist$percent_intensity)
+```
+
+Note that there are some bulbs that have less than 100% intensity after 2104 hours. 
