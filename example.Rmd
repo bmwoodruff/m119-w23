@@ -19,10 +19,10 @@ dist <- led_time(2100)
 head(dist)
 ```
 
-We can visuaize the intensity with a histogram.
+We can visualize the intensity with a histogram.
 
 ```{r}
-hist(dist$percent_intensity)
+hist(dist$percent_intensity, probability = TRUE)
 ```
 
 Note that there are some bulbs that have less than 100% intensity after 2104 hours. 

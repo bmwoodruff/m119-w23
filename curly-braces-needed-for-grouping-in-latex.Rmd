@@ -1,0 +1,18 @@
+---
+title: "Testing powers"
+author: "Ben"
+date: "2023-01-19"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+Let's show some math that includes powers, such as $2^x$.
+
+To get more than one thing to be include in LaTeX, use curly braces {} as the grouping symbol.  So typing $3^-x$ versus $3^{-x}$ yields differet results. 
+
+
