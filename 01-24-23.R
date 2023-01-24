@@ -87,3 +87,17 @@ plot(t,y1,xlab="Hour ", ylab="Intensity(%) ", pch=16,main='f5')
 lines(x,yM,col=2)
 plot(t,y1,xlab="Hour ", ylab="Intensity(%) ", pch=16, xlim = c(-10,80000),ylim = c(-10,120))
 lines(x,yM,col=2)
+
+
+
+f2 <- function(x,a0=100,a1=.001,a2=-.0001){ a0 + a1*x+a2*x^2 }
+
+x <- seq(-10,80001,2)
+yM <- f2(x,a0=100,a1=.00095,a2=-.0000001)
+
+par(mfrow=c(1,2),mar=c(2,2,3,0.25),oma=rep(0.5,4))
+plot(t,y1,xlab="Hour ", ylab="Intensity(%) ", pch=16,main='f2')
+lines(x,yM,col=2)
+plot(t,y1,xlab="Hour ", ylab="Intensity(%) ", pch=16, xlim = c(-10,80000),ylim = c(-10,120))
+lines(x,yM,col=2)
+
