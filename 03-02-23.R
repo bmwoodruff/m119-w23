@@ -61,7 +61,7 @@ solvesystem <- function(c11, c12,b1,c21,c22,b2){
     (c11*b2 - b1*c21)/(c11*c22 - c21*c12))
 }
 
-sol <- solvesystem(c11, c12, b1, c12, c22, b2)
+sol <- solvesystem(c11, c12, b1, c21, c22, b2)
 sol
 
 
